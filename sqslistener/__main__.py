@@ -21,7 +21,7 @@ class Listener(Service):
             try:
                 message = response['Messages'][0]
                 with open(os.environ["SQSL_FILE_PATH"], "a") as myfile:
-                    myfile.write(message)
+                    myfile.write(str(message))
                 receipt_handle = message['ReceiptHandle']
                 sqs.delete_message(QueueUrl=queue_url, ReceiptHandle=receipt_handle)
             except KeyError:
