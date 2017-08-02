@@ -5,6 +5,7 @@ AWS SQS Listener
 
 - clone repo
 - cd into repo root
+- install service module `pip install service`
 - run `python setup.py install`
 
 ## usage:
